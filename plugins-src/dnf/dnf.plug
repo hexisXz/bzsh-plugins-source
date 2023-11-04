@@ -1,0 +1,15 @@
+#!/bin/sh 
+
+alias dna='sudo dnf autoremove'
+
+alias dnc='sudo dnf clean all'
+
+alias dnd='sudo dnf downgrade'
+
+alias dnh='sudo dnf history'
+
+alias dni='sudo dnf install'
+
+alias dns='sudo dnf search'
+
+alias dnu='sudo dnf upgrade'

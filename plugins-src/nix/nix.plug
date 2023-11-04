@@ -1,0 +1,27 @@
+#!/bin/sh 
+
+alias nixbin='sudo ln -s /home/$USER/.nix-profile/share/applications/* /bin/'
+
+alias nixapp='sudo ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/'
+
+function nix () {
+	case $1 in
+		-i)
+		  nix-env -i $2
+		  ;;
+		-R)
+		  nix-env --uninstall $2
+		  ;;
+		-l)
+		  nix-env -q
+		  ;;
+		-u)
+		  nix-env -u
+		  ;;
+	        -up)
+		   nix-env -u $2
+		   ;;
+		 *)
+	          ;;
+	 esac
+}
